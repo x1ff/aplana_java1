@@ -6,10 +6,7 @@ public class BinaryNumber {
     private void setBinValue(String value) { binValue = value; }
     private void setIntValue(int value) { intValue = value; }
     private String getBinValue() { return this.binValue; }
-
     private BinaryNumber(){ }
-
-
     public BinaryNumber(String binValue){
         this.setBinValue(binValue);
     }
