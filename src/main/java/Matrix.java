@@ -38,12 +38,10 @@ public class Matrix {
         }
         sc.close();
         System.out.println("\n Results");
-        for (int i = 0; i < height; i++) {
-            StringBuilder buff = new StringBuilder();
-            for (int j = 0; j < length; j++) {
-                buff.append(" ").append(3 * arr[i][j]);
-            }
-            System.out.println(buff);
+        StringBuilder buff = new StringBuilder();
+        for (int j = 0; j < length; j++) {
+            buff.append(" ").append(3 * arr[0][j]);
         }
+        System.out.println(buff);
     }
 }
