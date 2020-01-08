@@ -8,7 +8,7 @@ public class FooArray {
         try {
             length = sc.nextInt();
         } catch (java.util.InputMismatchException err) {
-            System.out.println("ERR: введено не число " + err);
+            System.out.println("ERR: Length should be integer  " + err);
             return;
         }
         String[] arr = new String[length + 1];
@@ -19,7 +19,11 @@ public class FooArray {
         sc.close();
         System.out.println("\n Results");
         for (int i = 0; i <= length; i++) {
-            System.out.println(arr[i]);
+            try {
+                System.out.println(2 * Double.parseDouble(arr[i]));
+            } catch (NumberFormatException e) {
+                System.out.println("Program can't multiply " + arr[i] + "and 2 :" + e);
+            }
         }
     }
 }
