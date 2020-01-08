@@ -1,27 +1,50 @@
-import java.util.Scanner;
+import javax.swing.*;
+import java.awt.*;
 
 public class MultiplicationTable {
     private String number;
-
-    /**
-     * 1 - long: n - Integer, n < |+- 9 223 372 036 854 775 807|;
-     * 2 - double: a/b =
-     * 3 - bigger then |long|  n > |+- 9 223 372 036 854 775 807|
-     * 4 - complex number: n = z = x + iy
-     * 5 - Fraction: a/b
-     * 6 - with e
-     */
-    private byte typeOfNumber;
-
-    private void setNumber(String nextLine) {
-        this.number = nextLine;
+    //Так как термин любое число не определен, определим его сами как int
+    private JTable table;
+    private void setNumber(String str) {
+        this.number = str;
     }
 
-
+    private MultiplicationTable() {
+    }
+    private void initTable() throws NumberFormatException {
+        setNumber(JOptionPane.showInputDialog("Enter any number: "));
+        /*
+         * Так как нельзя использовать циклы, то от 1 до 10 у нас будет с шагом 9,
+         * если нужен шаг меньше, то дозаполним columnNames  и data
+         */
+        String[] columnNames = {
+            number + "x1", number + "x10"
+        };
+         int parsedInt = Integer.parseInt(number);
+         Object[][] data = {{parsedInt, parsedInt * 10}};
+         this.table = new JTable(data, columnNames);
+    }
+    private void frameTable() {
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            JFrame.setDefaultLookAndFeelDecorated(true);
+            JFrame frame = new JFrame("Multiplication Table");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            JScrollPane scrollPane = new JScrollPane(table);
+            frame.getContentPane().add(scrollPane);
+            frame.setPreferredSize(new Dimension(800, 74));
+            frame.pack();
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+        });
+    }
     public static void main(String[] args) {
         MultiplicationTable myTable = new MultiplicationTable();
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter any number, what ever you want!!!: ");
-        myTable.setNumber(sc.nextLine());
+        try {
+            myTable.initTable();
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "ERR: Введенено не число:" + e, "NumberFormatException", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        myTable.frameTable();
     }
 }
