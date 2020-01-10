@@ -6,29 +6,37 @@ import java.util.Scanner;
      * Размер массива задается пользователем.
      */
 public class FooArray {
+    private int length;
+    private double [] array;
+
+    private void enterLength (Scanner sc) throws NumberFormatException {
+        System.out.println("Enter length number: ");
+        length = Integer.parseInt(sc.nextLine());
+        array = new double[length];
+    }
+    private void enterValues (Scanner sc) throws NumberFormatException {
+        for (int i = 0; i < length; i++) {
+            System.out.println("Enter " + i + " el of array");
+            array[i] = Double.parseDouble(sc.nextLine());
+        }
+    }
+    private void printValues () {
+        System.out.println("\n Results");
+        for (int i = 0; i < length; i++) {
+            System.out.println(2 * array[i]);
+        }
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter length number: ");
-        int length;
+        FooArray arr = new FooArray();
         try {
-            length = sc.nextInt();
-        } catch (java.util.InputMismatchException err) {
-            System.out.println("ERR: Length should be integer  " + err);
+            arr.enterLength(sc);
+            arr.enterValues(sc);
+        } catch (NumberFormatException err) {
+            System.out.println("ERR: Length or values should be integer  " + err);
             return;
         }
-        String[] arr = new String[length + 1];
-        System.out.println("Enter " + length + " numbers");
-        for (int i = 0; i <= length; i++) {
-            arr[i] = sc.nextLine();
-        }
         sc.close();
-        System.out.println("\n Results");
-        for (int i = 0; i <= length; i++) {
-            try {
-                System.out.println(2 * Double.parseDouble(arr[i]));
-            } catch (NumberFormatException e) {
-                System.out.println("Program can't multiply " + arr[i] + "and 2 :" + e);
-            }
-        }
+        arr.printValues();
     }
 }
