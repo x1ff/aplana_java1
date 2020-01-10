@@ -1,5 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+    /* Задача №5: Таблица умножения
+     * Необходимо вывести на экран таблицу умножения от 1 до 10 для введённого пользователем любого числа.
+     * Использовать циклы запрещено.
+     */
 
 public class MultiplicationTable {
     private String number;

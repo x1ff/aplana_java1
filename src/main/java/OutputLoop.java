@@ -1,3 +1,6 @@
+    /* Задача №8: Цикличный вывод данных на экран
+     * Необходимо с помощью цикла вывести на экран числа от 1 до 50.
+     */
 public class OutputLoop {
     private void displayNumbers() {
         System.out.println("####### LOOP ########");
