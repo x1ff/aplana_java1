@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FooString {
+public class FooString2 {
     private String str;
     private void enterStr(Scanner sc) {
         System.out.println("Enter string: ");
@@ -13,10 +13,10 @@ public class FooString {
         System.out.println("Print string \n" + str);
     }
     public static void main(String[] args) {
-        FooString s = new FooString();
+        FooString2 s = new FooString2();
         Scanner sc = new Scanner(System.in);
         s.enterStr(sc);
-        s.removeSpace(); //task12
-        s.printStr();    //task11
+        s.removeSpace();
+        s.printStr();
     }
 }
