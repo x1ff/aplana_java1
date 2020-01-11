@@ -1,21 +1,24 @@
 import javax.swing.*;
-    /*  Задача №6: Отработка арифметических операций
-     *  Написать программу, которая будет выполнять следующие действия:
-     *  1. Ввод трех чисел с клавиатуры x, y, z
-     *  2. Нахождение и вывод на экран среднего арифметического чисел x, y, z
-     *  3. Деление среднего арифметического на 2 без остатка
-     *  4. Если полученное число больше 3, то вывести на экран сообщение "Программа выполнена корректно"
-     */
 
-
+/**
+ *  Задача №6: Отработка арифметических операций
+ *  Написать программу, которая будет выполнять следующие действия:
+ *  1. Ввод трех чисел с клавиатуры x, y, z
+ *  2. Нахождение и вывод на экран среднего арифметического чисел x, y, z
+ *  3. Деление среднего арифметического на 2 без остатка
+ *  4. Если полученное число больше 3, то вывести на экран сообщение "Программа выполнена корректно"
+ */
 public class ArithmeticOperations {
     private double average;
     private int quotient; //average divided by 2
 
     private void setValue() throws NumberFormatException {
-        double x = Double.parseDouble(JOptionPane.showInputDialog(null,"Введи X: ", "1. Ввод трех чисел с клавиатуры x, y, z", JOptionPane.QUESTION_MESSAGE));
-        double y = Double.parseDouble(JOptionPane.showInputDialog(null,"Введи Y: ", "1. Ввод трех чисел с клавиатуры x, y, z", JOptionPane.QUESTION_MESSAGE));
-        double z = Double.parseDouble(JOptionPane.showInputDialog(null,"Введи Z: ", "1. Ввод трех чисел с клавиатуры x, y, z", JOptionPane.QUESTION_MESSAGE));
+        double x = Double.parseDouble(JOptionPane.showInputDialog(null,
+                "Введи X: ", "1. Ввод трех чисел с клавиатуры x, y, z", JOptionPane.QUESTION_MESSAGE));
+        double y = Double.parseDouble(JOptionPane.showInputDialog(null,
+                "Введи Y: ", "1. Ввод трех чисел с клавиатуры x, y, z", JOptionPane.QUESTION_MESSAGE));
+        double z = Double.parseDouble(JOptionPane.showInputDialog(null,
+                "Введи Z: ", "1. Ввод трех чисел с клавиатуры x, y, z", JOptionPane.QUESTION_MESSAGE));
         average = (x + y + z)/3;
         quotient = ((int) average) / 2;
     }
