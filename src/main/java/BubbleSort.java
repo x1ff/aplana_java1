@@ -11,7 +11,7 @@ public class BubbleSort {
         String RETURN_CONDITION = "stop";
         ArrayList<Integer> arr = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-        System.out.println("INFO: Введите целые числа в массив, для завершения ввода введит  stop");
+        System.out.println("INFO: Вводите целые числа в массив, для завершения ввода введите  stop");
         String buff;
         do {
             buff = sc.nextLine();
