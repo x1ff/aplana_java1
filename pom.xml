@@ -51,6 +51,7 @@
                 <directory>${project.basedir}/src/main/resources</directory>
                 <includes>
                     <include>[task16.txt]</include>
+                    <include>[task17.txt]</include>
                 </includes>
             </resource>
         </resources>
