@@ -52,6 +52,7 @@
                 <includes>
                     <include>[task16.txt]</include>
                     <include>[task17.txt]</include>
+                    <include>[task18.txt]</include>
                 </includes>
             </resource>
         </resources>
