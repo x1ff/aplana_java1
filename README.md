@@ -39,6 +39,7 @@ Java 1.0
 | 16 | Выгрузка данных из файла на экранЗадание | MyFileReader.java |
 | 17 | Запись данных в файл | MyFileWriter.java |
 | 18 | Выгрузка данных из файла, проверка и перезапись | MyFileReWriter.java |
+| 19 | Итоговая задача №1 | FinalBinaryNumber.java |
 
 ## Программа курса
 
