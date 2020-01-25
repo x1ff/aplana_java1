@@ -40,6 +40,7 @@ Java 1.0
 | 17 | Запись данных в файл | MyFileWriter.java |
 | 18 | Выгрузка данных из файла, проверка и перезапись | MyFileReWriter.java |
 | 19 | Итоговая задача №1 | FinalBinaryNumber.java |
+| 20 | Итоговая задача №2 | InsertionSort.java |
 
 ## Программа курса
 
