@@ -22,7 +22,7 @@ public class MoneyConverter {
                 return;
             }
             System.out.println("INFO: Введите количество рублей");
-            ruCount = Double.parseDouble(sc.nextLine());
+            ruCount = Double.parseDouble(sc.nextLine().replace(',','.'));
             System.out.printf("INFO: Итого: %.2f долларов %n", ruCount/course);
         } catch (NumberFormatException e) {
             System.out.println("ERR: ошибка формата данных");
